@@ -3,11 +3,8 @@ import random
 def number_guessing_game():
     print("🎯 Welcome to the Number Guessing Game!")
     print("I'm thinking of a number between 1 and 100.")
-    
-    # Generate a random number between 1 and 100
+  
     secret_number = random.randint(1, 100)
-    
-    # Set number of attempts
     attempts = 0
     max_attempts = 13
 
@@ -30,13 +27,10 @@ def number_guessing_game():
     else:
         print(f"❌ Sorry, you've used all your attempts. The number was {secret_number}.")
 
-    # Ask if the player wants to play again
     play_again = input("Do you want to play again? (yes/no): ").strip().lower()
     if play_again in ('yes', 'y'):
         number_guessing_game()
     else:
         print("👋 Thanks for playing! Goodbye.")
 
-# Start the game
 number_guessing_game()
-
